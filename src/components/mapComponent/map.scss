@@ -1,0 +1,35 @@
+@import '../../scss/sizes.scss';
+
+#map { 
+  height:  100%; 
+  position:absolute;
+  right: 0;
+  left: 0;
+  top:0;
+  bottom:0;
+
+  @include tablet{
+    &.nonactive{
+        width: 92%;
+        width: calc(100%);
+        width: -moz-calc(100%);
+        width: -webkit-calc(100%);
+    }
+
+  }
+  @include desktop{
+    &.nonactive{
+      width: 97%;
+      width: calc(100%);
+      width: -moz-calc(100%);
+      width: -webkit-calc(100%);
+    } 
+  }
+}
+
+
+
+.leaflet-left .leaflet-control-scale {
+  margin-left: 10px;
+}
+
