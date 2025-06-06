@@ -1,0 +1,92 @@
+@use './colors.scss' as *;
+
+// Animación del spinner
+@keyframes ldio-spin-scale {
+  0% {
+    opacity: 1;
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(2.21, 2.21);
+  }
+  100% {
+    opacity: 0;
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(1, 1);
+  }
+}
+
+// Contenedor del spinner
+.loadingio-spinner-spin {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin: auto;
+  // Si quieres posicionarlo centrado en pantalla puedes descomentar estas líneas:
+  // position: absolute;
+  // left: 50%;
+  // top: 40%;
+  // transform: translate(-50%, -50%);
+}
+
+// Wrapper principal para las partículas
+.ldio-3z7uhzj17ix {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10000;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  
+  div {
+    box-sizing: content-box;
+
+    > div {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $primary_color; // variable de color
+      animation: ldio-spin-scale 0.97s linear infinite;
+    }
+  }
+
+  // Configuración para cada círculo con delay y posición
+  div:nth-child(1) > div {
+    left: 69px;
+    top: 45px;
+    animation-delay: -0.81s;
+  }
+  div:nth-child(2) > div {
+    left: 57px;
+    top: 66px;
+    animation-delay: -0.65s;
+  }
+  div:nth-child(3) > div {
+    left: 33px;
+    top: 66px;
+    animation-delay: -0.49s;
+  }
+  div:nth-child(4) > div {
+    left: 21px;
+    top: 45px;
+    animation-delay: -0.32s;
+  }
+  div:nth-child(5) > div {
+    left: 33px;
+    top: 24px;
+    animation-delay: -0.16s;
+  }
+  div:nth-child(6) > div {
+    left: 57px;
+    top: 24px;
+    animation-delay: 0s;
+  }
+
+  // Rotación y punto de origen para cada grupo
+  > div:nth-child(1) { transform: rotate(0deg); transform-origin: 74px 50px; }
+  > div:nth-child(2) { transform: rotate(60deg); transform-origin: 62px 71px; }
+  > div:nth-child(3) { transform: rotate(120deg); transform-origin: 38px 71px; }
+  > div:nth-child(4) { transform: rotate(180deg); transform-origin: 26px 50px; }
+  > div:nth-child(5) { transform: rotate(240deg); transform-origin: 38px 29px; }
+  > div:nth-child(6) { transform: rotate(300deg); transform-origin: 62px 29px; }
+}
