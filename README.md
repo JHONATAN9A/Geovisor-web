@@ -39,7 +39,7 @@ visualización de capas, gráficas interactivas y herramientas de impresión.
    `npm install`
 
 3. Ejecutar servidor de desarrollo:  
-   `npm run dev`
+   `npm start`
 
 4. Abrir navegador en:  
    http://localhost:3000
