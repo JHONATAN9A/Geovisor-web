@@ -1,25 +1,47 @@
-# Geovisor YopalAdd commentMore actions
-Web basica para mostrar datos geograficos con leaflet.
-# 🗺️ Geovisor Básico con Leaflet y Node.js
+# Visor Geográfico - Municipio de Repelón
 
-Este proyecto implementa un geovisor simple utilizando la biblioteca Leaflet.js, servido sobre un entorno backend en Node.js. Permite la visualización interactiva de mapas con capas base y funcionalidades básicas de navegación geográfica.
+Descripción:  
+Este proyecto usa Node.js y Leaflet.js para visualizar información geoespacial  
+del municipio de Repelón. Incluye funcionalidades avanzadas para manejo y  
+visualización de capas, gráficas interactivas y herramientas de impresión.
 
-## 🌐 Descripción del Proyecto
+## Características principales
 
-El objetivo es ofrecer una estructura base para aplicaciones de visualización geoespacial, que puede ser extendida con datos dinámicos, capas temáticas o integración con servicios externos (como GeoJSON, WMS, etc.).
+- Mapa centrado en el municipio de Repelón.  
+- Cambio del mapa base por uno distinto al predeterminado.  
+- Mapa ocupa el 100% del área visible.  
+- Plugin MiniMap para mapa pequeño de contexto.  
+- Control de capas para activar o desactivar capas geográficas.  
+- Gráfica interactiva con cantidad de predios por área en hectáreas.  
+  Al seleccionar una barra, se resaltan los predios relacionados en el mapa.  
+- Marcador (marker) en el centro del municipio.  
+- Conexión a GeoServer remoto.  
+- Carga de capas:  
+  * repelon:lc_terreno  
+  * repelon:cc_sectorrural
+  * repelon:av_zonahomogeneafisicarural 
+- Al hacer clic en un predio de lc_terreno:  
+  Se resalta el terreno.  
+  Se muestra un modal con los atributos:  
+  - etiqueta  
+  - area_terreno  
+- Herramienta para imprimir en PDF la vista actual del mapa.  
+- Código refactorizado, comentado y reutilizable.  
+- Diseño responsive para móviles y escritorio.
 
-## ⚙️ Tecnologías Utilizadas
+## Instalación y ejecución
 
-- **Node.js**: Servidor backend para servir la aplicación web.
-- **Leaflet.js**: Biblioteca JavaScript para visualización de mapas interactivos.
-- **HTML/CSS**: Para la estructura y estilo del frontend.
-  
-## 🖼️ Vista de la Aplicación
+1. Clonar repositorio:  
+   `git clone https://github.com/JHONATAN9A/MAP-Leaflet-Node.js`  
+   `cd MAP-Leaflet-Node.js`
 
-![Vista del geovisor](https://github.com/JHONATAN9A/Geovisor-web/blob/main/img_g_a.png)
+2. Instalar dependencias:  
+   `npm install`
 
-## 🚀 Funcionalidades Básicas
+3. Ejecutar servidor de desarrollo:  
+   `npm run dev`
 
-- Visualización de mapa base (OpenStreetMap).
-- Interacción básica: zoom, paneo, marcador.
-- Arquitectura lista para incorporar nuevas capas y datos geográficos.
+4. Abrir navegador en:  
+   http://localhost:3000
+
+---
